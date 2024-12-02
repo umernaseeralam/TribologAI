@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Jyväskylä Airport Weather Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span {
+            color: #ff4d4d;
+        }
+
+        .section-container {
+            padding: 2rem 5%;
+            text-align: center;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .first-section {
+            margin-top: 5rem;
+        }
+
+        .section-title {
+            color: #ff4d4d;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            color: #666;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: #fff5d7;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .feature-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .image-modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #fff5d7;
+            padding: 3rem 5%;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .footer .logo {
+            margin-bottom: 1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">New Jyväskylä <span>Airport</span> Weather <span>Data</span></div>
+    </nav>
+
+    <section class="section-container first-section">
+        <h2 class="section-title">Weather Data Update: 2023 Insights from Jyväskylä Airport</h2>
+        <p class="section-description">We have integrated the latest weather data for the year 2023, sourced directly from Jyväskylä Airport. The data was retrieved from the Finnish Meteorological Institute's (FMI) open data platform. This addition enhances our analysis capabilities and ensures more accurate and up-to-date weather-related insights.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="/airport_weather_data_DF.JPG" alt="Source Data Overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section-container">
+        <h2 class="section-title">Data Processing and Feature Engineering for Weather Analysis</h2>
+        <p class="section-description">Added a Time_Stamp column by combining date and time data.<br>
+            Created snow, ice, drizzle, and rain columns based on the weather description column.<br>
+            The Tie 4 dataset contained several similar columns, with some missing data.<br>
+            Used similar columns within the Tie 4 dataset to impute missing values effectively.</p>
+        <div class="features-grid">
+            <div class="feature-card"><img src="/Section 2/1 (1).JPG" alt="Processing Image 1"></div>
+            <div class="feature-card"><img src="/Section 2/1 (1).png" alt="Processing Image 2"></div>
+            <div class="feature-card"><img src="/Section 2/1 (2).JPG" alt="Processing Image 3"></div>
+            <div class="feature-card"><img src="/Section 2/1 (3).JPG" alt="Processing Image 4"></div>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section-container">
+        <h2 class="section-title">Data Integration and Missing Value Handling</h2>
+        <p class="section-description">Merged the Tie 4 dataset with airport weather data using the Time_Stamp column,<br> 
+            retaining Tie 4's original columns to analyze distributions and correlations.<br>
+            Identified missing values in the merged dataset and used the interpolation method to impute them by averaging adjacent data points in the same column.</p>
+        <div class="features-grid">
+            <div class="feature-card"><img src="/Section 3/1 (1).JPG" alt="Integration Image 1"></div>
+            <div class="feature-card"><img src="/Section 3/1 (2).JPG" alt="Integration Image 2"></div>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-container">
+        <h2 class="section-title">Correlation Analysis and Data Distribution Insights</h2>
+        <p class="section-description">Checked correlations between features from both datasets. Air temperature and temperature, as well as air pressure and road temperature, showed moderate positive correlations with friction. Snow displayed a strong negative correlation, while relative humidity showed a moderate negative correlation with friction. However, the lack of correlation between ice and friction was unexpected due to insufficient ice observations in the dataset.<br>
+            Compared the distributions of temperature and air_temp columns and assessed the reliability of the imputation process for missing values.<br>
+            Evaluated the distribution of dewpoint from Tie 4 and airport weather columns to confirm if they aligned and supported reliance on the imputation method.<br>
+            Analyzed how dewpoint, relative humidity, and friction are distributed with snow. Observed that friction decreases significantly with moderate snow at temperatures between -10°C and 0°C, and further drops under high humidity conditions.</p>
+        <div class="features-grid">
+            <div class="feature-card"><img src="/Section 4/1 (1).png" alt="Correlation Analysis 1"></div>
+            <div class="feature-card"><img src="/Section 4/1 (2).png" alt="Correlation Analysis 2"></div>
+            <div class="feature-card"><img src="/Section 4/1 (3).png" alt="Correlation Analysis 3"></div>
+            <div class="feature-card"><img src="/Section 4/1 (4).png" alt="Correlation Analysis 4"></div>
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section-container">
+        <h2 class="section-title">Overview of Marwis Mobile Sensor Data</h2>
+        <p class="section-description">We have three Marwis mobile sensor datasets: the first dataset contains approximately 1 million data points, while the second and third datasets each have more than half a million data points, totaling over 2 million data points.<br>
+            Initially, the data was in JSON format, and after converting it into .csv files, each dataset had 21 columns.<br>
+            Through data reduction, we successfully narrowed down the columns to the 12 most important ones.</p>
+        <div class="features-grid">
+            <div class="feature-card"><img src="/section 5/1 (1).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="/section 5/1 (2).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="/section 5/1 (3).png" alt="Marwis Sensor Data 3"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="image-modal" id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img src="" alt="Modal Image" id="modalImage">
+    </div>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+
+        document.querySelectorAll(".feature-card img").forEach(img => {
+            img.addEventListener("click", () => {
+                modalImage.src = img.src;
+                modal.style.display = "flex";
+            });
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">New Jyväskylä <span>Airport</span> Weather <span>Data</span></div>
+            <p>The analyses and findings presented above are based on comprehensive data processing, cleaning, and correlation assessments. The insights derived from this study highlight the reliability of imputed data and its alignment with observed trends, providing a robust foundation for further analysis and application in weather-related studies.</p>
+        </div>
+        <div class="copyright">
+            © 2024 New Jyväskylä <span>Airport</span> Weather <span>Data</span>. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
