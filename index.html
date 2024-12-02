@@ -71,6 +71,9 @@
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
+        
+        .features-grid .wide-card {
+    grid-column: span 2;}
 
         .feature-card {
             background: #fff5d7;
@@ -164,8 +167,37 @@
 <body>
     <nav class="navbar">
         <div class="logo"> Tribolog<span>AI</span></div>
-    </nav>
-
+    </nav>          
+    <!--Section 0-->
+    <section class="section-container first-section">
+        <h2 class="section-title"> Data Analysis and Missing Value Inspection for Tie 4 and Tie 9 (2023)</h2>
+        <p class="section-description">We have analyzed the data for Tie 4 and Tie 9 for the year 2023. The following comments and plots pertain to these datasets.<br>
+            Both datasets have a significant number of missing values. We have removed columns that contained all missing values and focused on analyzing the columns with mostly available data, along with their respective timestamps. After removing the columns with complete missing values, we still have around 100 columns remaining.<br>
+            The images below illustrate the missing values for both datasets, Tie 4 and Tie 9 for 2023. I will also share these images as attachments, as they may not be visible here.<br>
+            In the images, shorter lines indicate larger amounts of missing values, so the more useful columns are represented by the longer lines. However, there are also similar columns among them.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="./Section 0/1 (1).png" alt="Source Data Overview">
+            </div>
+            <div class="feature-card">
+                <img src="./Section 0/1 (2).png" alt="Source Data Overview">
+            </div>
+            <div class="feature-card">
+                <img src="./Section 0/1 (3).png" alt="Source Data Overview">
+            </div>
+            <div class="feature-card">
+                <img src="./Section 0/1 (4).png" alt="Source Data Overview">
+            </div>
+            <div class="feature-card  wide-card " >
+                <img src="./Section 0/1 (5).png" alt="Source Data Overview">
+            </div>
+            <div class="feature-card wide-card ">
+                <img src="./Section 0/1 (6).png" alt="Source Data Overview">
+            </div>
+        </div>
+    </section>
+    
+    <!--Section 1-->
     <section class="section-container first-section">
         <h2 class="section-title"> TribologAI</h2>
         <p class="section-description">We have integrated the latest weather data for the year 2023, sourced directly from Jyväskylä Airport. The data was retrieved from the Finnish Meteorological Institute's (FMI) open data platform. This addition enhances our analysis capabilities and ensures more accurate and up-to-date weather-related insights.</p>
