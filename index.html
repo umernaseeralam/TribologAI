@@ -41,7 +41,6 @@
         }
 
         .section-container {
-            padding: 2rem 5%;
             text-align: center;
             max-width: 1600px;
             margin: 0 auto;
@@ -173,6 +172,29 @@
     <nav class="navbar">
         <div class="logo"> Tribolog<span>AI</span></div>
     </nav>          
+
+
+
+    <!--Intro Section-->
+    <section class="section-container first-section">
+        <h2 class="section-title">Introduction to TribologAI</h2>
+        <p class="section-description">TribologAI is a collaborative project with Marjetas Oy, a company specializing in road and infrastructure services for municipalities. The project aims to analyze weather and road data to identify factors affecting road friction and develop a Machine Learning (ML) or Neural Network (NN) algorithm to predict road conditions a few hours in advance using 10-minute interval data.<br>
+            Our analysis revealed inconsistencies in variables and time periods across datasets. One team member focused on Marwis mobile sensor data, while another worked on the Tie 4 Jyväskylä dataset. Despite cleaning the data, key features influencing friction, especially around temperatures between -10°C and +5°C, were missing, limiting model accuracy.<br>
+            To enhance the dataset, we incorporated open-source weather data from Jyväskylä Airport, sourced from FMI's website, and merged it with existing data using timestamps. Below, we present the analysis and plots from both datasets, individually and combined.</p><br>
+    </section>
+    <!--Intro Section 2-->
+    <section class="section-container first-section">
+        <h2 class="section-title">Datasets and Sources</h2>
+        <p class="section-description">
+            Marjetas Oy - Cooperation company, supplied road and weather data<br>
+            Digitraffic - Road and weather data<br>
+            Link: https://www.digitraffic.fi<br>
+            Snower - Road and weather data<br>
+            Link: Open data - Finnish Meteorological Institute<br>
+            Jyväskylä airport 2023 weather data<br>
+        </p>
+
+
     <!--Section 0-->
     <section class="section-container first-section">
         <h2 class="section-title"> Data Analysis and Missing Value Inspection for Tie 4 and Tie 9 (2023)</h2>
