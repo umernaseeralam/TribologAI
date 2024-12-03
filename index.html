@@ -41,6 +41,7 @@
         }
 
         .section-container {
+            padding: 5%;
             text-align: center;
             max-width: 1600px;
             margin: 0 auto;
@@ -70,20 +71,20 @@
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+
         .features-grid .wide-card {
-    grid-column: span 2;}
-    
-    .features-grid .wider-card {
-    grid-column: span 4;}
-    
-    
+            grid-column: span 2;
+        }
+
+        .features-grid .wider-card {
+            grid-column: span 4;
+        }
 
         .feature-card {
-            background: #fff5d7;
+            background: #fff;
             padding: 1.5rem;
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -93,13 +94,13 @@
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .feature-card img {
             width: 100%;
             height: auto;
-            max-height: 400px;
+            max-height: 300px;
             object-fit: cover;
             border-radius: 10px;
             cursor: pointer;
@@ -139,9 +140,10 @@
         }
 
         .footer {
-            background: #fff5d7;
+            background: #ff4d4d; /* Changed background color */
             padding: 3rem 5%;
-            margin-top: 2rem;
+            color: white; /* Changed text color */
+            text-align: center; /* Centered text */
         }
 
         .footer-content {
@@ -151,6 +153,12 @@
 
         .footer .logo {
             margin-bottom: 1rem;
+            font-size: 2rem; /* Increased logo font size */
+        }
+
+        .footer p {
+            margin: 1rem 0; /* Added margin for spacing */
+            line-height: 1.5; /* Improved readability */
         }
 
         .copyright {
@@ -158,7 +166,7 @@
             margin-top: 2rem;
             padding-top: 1.5rem;
             border-top: 1px solid #eee;
-            color: #666;
+            color: #f0f0f0; /* Lighter color for copyright text */
         }
 
         @media (max-width: 768px) {
@@ -172,8 +180,6 @@
     <nav class="navbar">
         <div class="logo"> Tribolog<span>AI</span></div>
     </nav>          
-
-
 
     <!--Intro Section-->
     <section class="section-container first-section">
@@ -193,7 +199,7 @@
             Link: Open data - Finnish Meteorological Institute<br>
             Jyväskylä airport 2023 weather data<br>
         </p>
-
+    </section>
 
     <!--Section 0-->
     <section class="section-container first-section">
@@ -215,10 +221,10 @@
             <div class="feature-card">
                 <img src="./Section 0/1 (4).png" alt="Source Data Overview">
             </div>
-            <div class="feature-card  wide-card " >
+            <div class="feature-card wide-card">
                 <img src="./Section 0/1 (5).png" alt="Source Data Overview">
             </div>
-            <div class="feature-card wide-card ">
+            <div class="feature-card wide-card">
                 <img src="./Section 0/1 (6).png" alt="Source Data Overview">
             </div>
         </div>
@@ -251,7 +257,7 @@
             <div class="feature-card">
                 <img src="./Section 1.5/1 (4).png" alt="Source Data Overview">
             </div>
-            <div class="feature-card  wider-card " >
+            <div class="feature-card wider-card">
                 <img src="./Section 1.5/1 (5).png" alt="Source Data Overview">
             </div>
         </div>
@@ -292,7 +298,7 @@
             Evaluated the distribution of dewpoint from Tie 4 and airport weather columns to confirm if they aligned and supported reliance on the imputation method.<br>
             Analyzed how dewpoint, relative humidity, and friction are distributed with snow. Observed that friction decreases significantly with moderate snow at temperatures between -10°C and 0°C, and further drops under high humidity conditions.</p>
         <div class="features-grid">
-            <div class="feature-card"><img src="./Section 4/1 (1).png" alt="Correlation Analysis 1"></div>
+            <div class="feature-card"><img src="./Section 4/1 (1 ).png" alt="Correlation Analysis 1"></div>
             <div class="feature-card"><img src="./Section 4/1 (2).png" alt="Correlation Analysis 2"></div>
             <div class="feature-card"><img src="./Section 4/1 (3).png" alt="Correlation Analysis 3"></div>
             <div class="feature-card"><img src="./Section 4/1 (4).png" alt="Correlation Analysis 4"></div>
@@ -311,6 +317,7 @@
             <div class="feature-card"><img src="./section 5/1 (3).png" alt="Marwis Sensor Data 3"></div>
         </div>
     </section>
+    
     <!--Section 6-->
     <section class="section-container">
         <h2 class="section-title">Initial DataSets</h2>
@@ -323,11 +330,121 @@
             Generated a Feature Association Matrix to explore relationships and correlations between features.
         </p>
         <div class="features-grid">
-            <div class="feature-card"><img src="./section 5/1 (1).png" alt="Marwis Sensor Data 1"></div>
-            <div class="feature-card"><img src="./section 5/1 (2).png" alt="Marwis Sensor Data 2"></div>
-            <div class="feature-card"><img src="./section 5/1 (2).png" alt="Marwis Sensor Data 2"></div>
-            <div class="feature-card"><img src="./section 5/1 (3).png" alt="Marwis Sensor Data 3"></div>
-            <div class="feature-card wider-card "><img src="./section 5/1 (3).png" alt="Marwis Sensor Data 3"></div>
+            <div class="feature-card"><img src="./section 6/1 (1).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 6/1 (2).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="./section 6/1 (3).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="./section 6/1 (4).png" alt="Marwis Sensor Data 3"></div>
+            <div class="feature-card wider-card"><img src="./section 6/1 (5).png" alt="Marwis Sensor Data 3"></div>
+        </div>
+    </section>
+    
+    <!--Section 7-->
+    <section class="section-container">
+        <h2 class="section-title">Initial Distribution of data and data cleaning</h2>
+        <p class="section-description">
+            The distribution of various features in the dataset was analyzed and adjusted as follows:<br>
+            The 'Water_Film_Surface_mm' initially had a non-normal distribution, but after fixing the issue, its distribution improved significantly.<br>
+            Similarly, the 'Ice_Percentage' exhibited a skewed distribution, which was corrected for better balance.<br>
+            The 'Amb_T' (ambient temperature) showed an almost normal distribution and was retained as is.<br>
+            The 'RH_at_Road_T' lacked sufficient data, making it unsuitable for analysis, so it was removed.<br>
+            The 'Road_Surface_Temperature' had an imbalanced distribution. Instead, we opted to use 'Amb_T', which showed better balance.<br>
+            The 'Dew_Point_T' had insufficient data, and due to the inability to recalculate it accurately, it was also removed.<br>
+            The 'Road Condition' column, calculated from Water Film, Temperature, and Ice Percentage, was deemed redundant for model training and excluded.<br>
+            The 'Friction' initially displayed a normal distribution with some imbalances at higher levels.<br After cleaning, the 'Friction' data achieved a more balanced distribution, making it suitable for modeling.<br>
+        </p>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 7/1 (1).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 7/1 (2).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="./section 7/1 (3).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card wide-card"><img src="./section 7/1 (4).png" alt="Marwis Sensor Data 3"></div>
+            <div class="feature-card wide-card"><img src="./section 7/1 (5).png" alt="Marwis Sensor Data 3"></div>
+            <div class="feature-card"><img src="./section 7/1 (6).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 7/1 (7).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="./section 7/1 (8).png" alt="Marwis Sensor Data 2"></div>
+            <div class="feature-card"><img src="./section 7/1 (9).png" alt="Marwis Sensor Data 3"></div>
+            <div class="feature-card wider-card"><img src="./section 7/1 (10).png" alt="Marwis Sensor Data 3"></div>
+        </div>
+    </section>
+    
+    <!--Section 8-->
+    <section class="section-container">
+        <h2 class="section-title">Cleaned and Balanced Dataset</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 8/1.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 9-->
+    <section class="section-container">
+        <h2 class="section-title">Making the Target Variable</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 9/1.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 10-->
+    <section class="section-container">
+        <h2 class="section-title">Make the Model</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 10/1.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 11-->
+    <section class="section-container">
+        <h2 class="section-title">Train the Model</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 11/1.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 12-->
+    <section class="section-container">
+        <h2 class="section-title">Evaluate the Model</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/1 (1).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 12/1 (2).png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 13-->
+    <section class="section-container">
+        <h2 class="section-title">Confusion Matrix</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/13.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 14-->
+    <section class="section-container">
+        <h2 class="section-title">Error Matrix</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/14.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 15-->
+    <section class="section-container">
+        <h2 class="section-title">ROC AUC Score</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/15.png" alt="Marwis Sensor Data 1"></div </div>
+    </section>
+
+    <!--Section 16-->
+    <section class="section-container">
+        <h2 class="section-title">Sample Signal For Slippery</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/16.png" alt="Marwis Sensor Data 1"></div>
+        </div>
+    </section>
+
+    <!--Section 17-->
+    <section class="section-container">
+        <h2 class="section-title">Mobile Application for TribologAI</h2>
+        <div class="features-grid">
+            <div class="feature-card"><img src="./section 12/17 (1).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 12/17 (2).png" alt="Marwis Sensor Data 1"></div>
+            <div class="feature-card"><img src="./section 12/17 (3).png" alt="Marwis Sensor Data 1"></div>
         </div>
     </section>
 
@@ -366,7 +483,7 @@
             <p>The analyses and findings presented above are based on comprehensive data processing, cleaning, and correlation assessments. The insights derived from this study highlight the reliability of imputed data and its alignment with observed trends, providing a robust foundation for further analysis and application in weather-related studies.</p>
         </div>
         <div class="copyright">
-            © 2024  TribologAI<span>AI</span>. All rights reserved.
+            © 2024 TribologAI<span>AI</span>. All rights reserved.
         </div>
     </footer>
 </body>
